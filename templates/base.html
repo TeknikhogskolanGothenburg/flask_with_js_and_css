@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_style.css') }}" />
+</head>
+<body>
+    <div class="menu">Main Menu</div>
+
+    <div id="content">
+        {% block content %}
+        {%  endblock %}
+    </div>
+    <div class="footer">Footer</div>
+    <script src="{{ url_for('static', filename='js/code.js') }}"></script>
+</body>
+</html>
