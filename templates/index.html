@@ -2,6 +2,14 @@
 
 {% block content %}
     <h1>This is the main page!!</h1>
+    {% if user is defined %}
+        <h3>Hello {{ user }}!</h3>
+    {% endif %}
     <hr>
-    <h3 id="text-content"></h3>
+    <form action="/" method="POST">
+        <input type="text" name="first" placeholder="First Name"> <br />
+        <input type="text" name="last" placeholder="Last Name"> <br />
+        <input type="email" name="email" placeholder="Email Address"> <br />
+        <input type="submit" value="Submit"> <br />
+    </form>
 {%  endblock %}
